@@ -39,8 +39,8 @@ html {
 }
 
 body {
-    font-family: "Vollkorn", Palatino, Times;
-    /* font-family: 'Source Han SerifCN', Georgia, Times, 'SimSun', serif!important; */
+    /* font-family: "Vollkorn", Palatino, Times; */
+    font-family: 'Source Han SerifCN', Georgia, Times, 'SimSun', serif!important;
     color: var(--mid-13);
     -webkit-font-smoothing: antialiased;
     line-height: 1.8rem;
@@ -56,10 +56,12 @@ body {
 }
 
 #write p {
-    line-height: 1.8rem;
+    line-height: 1.5rem;  /* 减小了行高 */
     word-spacing: .05rem;
     /* color: #3f3f3f; */
     color: var(--mid-13);
+    margin-top: 0.5em;  /* 减小段落间距 */
+    margin-bottom: 0.5em;
 }
 
 
@@ -202,10 +204,10 @@ h1:after {
 }
 
 h2 {
-    margin: 2em auto 1.4em;
+    margin: 1.4em auto 1em;  /* 减小了上下间距 */
     /* padding-left: 10px; */
     /* display:inline-block; */
-    line-height: 1.4;
+    line-height: 1.2;  /* 减小了行高 */
     font-size: 1.8em;
     /* border-left: 9px solid var(--main-6); */
     /* border-bottom: 1px solid #ddd; */
@@ -286,7 +288,7 @@ ul,
 ol,
 dl,
 table {
-    margin: 0.8em 0;
+    margin: 0.5em 0;  /* 减小上下间距 */
 }
 
 li>ol,
@@ -773,4 +775,29 @@ footer {
     pre {
         word-wrap: break-word;
     }
+}
+
+/* 插入文字默认靠左放置 */
+p .md-image:only-child{
+    width: auto;
+    text-align: left;
+}
+
+/* 编辑模式下缩短图片和段落文字的行间距 */
+.md-image {
+    margin: 0.5em 0;
+}
+
+#write p + .md-image, 
+.md-image + p {
+    margin-top: 0.3em;
+}
+
+/* 源码模式和所见即所得模式下的间距调整 */
+.cm-s-inner .cm-image {
+    margin: 0.3em 0;
+}
+
+.cm-s-typora-default .cm-paragraph {
+    margin: 0.3em 0;
 }
