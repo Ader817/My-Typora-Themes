@@ -801,3 +801,10 @@ p .md-image:only-child{
 .cm-s-typora-default .cm-paragraph {
     margin: 0.3em 0;
 }
+
+/* 打印时允许图片被分页 */
+@media print {
+    img {
+        page-break-inside: auto !important;
+    }
+}
