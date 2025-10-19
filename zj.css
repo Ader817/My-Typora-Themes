@@ -205,12 +205,8 @@ h1:after {
 
 h2 {
     margin: 1.4em auto 1em;  /* 减小了上下间距 */
-    /* padding-left: 10px; */
-    /* display:inline-block; */
     line-height: 1.2;  /* 减小了行高 */
     font-size: 1.8em;
-    /* border-left: 9px solid var(--main-6); */
-    /* border-bottom: 1px solid #ddd; */
     border-bottom: 1px solid var(--main-6);
 }
 
@@ -219,15 +215,19 @@ h2::before {
     color: #f22f27;
 }
 
+/* --- 修改开始 --- */
 h3 {
-    font-size: 1.4em;
-    line-height: 1.43;
-    margin: 1.6em auto 1.2em;
-    padding-left: 9px;
-    border-left: 5px solid #f22f27;
+    font-size: 1.6em; /* 字体小于h2 */
+    line-height: 1.3;
+    margin: 1.4em auto 1em;
+    border-left: none; /* 移除左边框 */
+    padding-left: 0; /* 移除内边距 */
 }
 
-
+h3::before {
+    content: '## '!important; /* 添加 '## ' 前缀 */
+    color: #f22f27;
+}
 /* 三级四级标题点击后左边的提示图标 */
 
 #write>h3.md-focus:before,
@@ -239,14 +239,18 @@ h3 {
 }
 
 h4 {
-    margin-top: 1.3em;
-    font-size: 1.2em;
-    padding-left: 6px;
-    padding-right: 6px;
-    display: inline-block;
-    border: 1px solid var(--main-6);
-    border-top: 4px solid var(--main-6);
+    font-size: 1.4em; /* 字体小于h3 */
+    margin: 1.4em auto 1em;
+    display: block; /* 确保是块级元素 */
+    border: none; /* 移除所有边框 */
+    padding: 0; /* 移除内边距 */
 }
+
+h4::before {
+    content: '### '!important; /* 添加 '### ' 前缀 */
+    color: #f22f27;
+}
+/* --- 修改结束 --- */
 
 #write h5::before,
 #write h6::before {
