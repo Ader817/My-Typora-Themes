@@ -43,7 +43,7 @@
   --variable-color: var(--drake-highlight);
   --outline-active-color: var(--a-color);
   --code-block-bg-color: #2b2b2b;
-  --code-block-color: #a9b7c6;
+  --code-block-color: #333333;
   --title-color: #135ce0;
   --strong-color: var(--title-color);
   --h2-underline-color: var(--title-color);
