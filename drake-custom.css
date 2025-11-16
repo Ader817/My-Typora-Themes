@@ -95,10 +95,15 @@ p {
   padding: 0.5rem !important;
   border-radius: 2px;
   word-wrap: normal;
-  background-color: var(--code-block-bg-color);
-  color: var(--code-block-color);
-  border: none;
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #7a7a7a;
   line-height: var(--code-line-height);
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+  padding-left: 12px;
+  line-height: 1.55rem;
 }
 
 .on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) *,
@@ -492,7 +497,7 @@ img {
 #write {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 30px 100px;
+  padding: 60px 30px 160px;
 }
 
 #typora-source .CodeMirror-lines {
@@ -539,6 +544,17 @@ h1 {
   font-size: 3rem;
   text-align: center;
   margin-top: 0;
+  padding-bottom: 0.3em;
+  margin-bottom: 1.2em;
+}
+
+h1:after {
+  content: "";
+  display: block;
+  margin: 0.2em auto 0;
+  width: 100px;
+  height: 2px;
+  border-bottom: 2px solid var(--title-color);
 }
 
 h2 {
@@ -780,7 +796,7 @@ kbd {
 
 @media print {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   table,
@@ -1424,12 +1440,13 @@ a.ty-link {
 }
 
 .cm-s-inner .CodeMirror-gutters {
-  border-right: 1px solid rgba(120, 120, 120, 0.3);
-  background: var(--code-block-bg-color);
+  border-right: 1px solid rgba(204, 51, 0);
+  background: #ffffff;
 }
 
 .cm-s-inner .CodeMirror-linenumber {
-  color: #585b5d;
+  width: 3ch !important;
+  color: rgba(128, 128, 255, 0.8);
 }
 
 .cm-s-inner .CodeMirror-matchingbracket {
